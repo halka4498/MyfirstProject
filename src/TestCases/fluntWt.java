@@ -19,17 +19,17 @@ public class fluntWt {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://shoppersstack.com/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS); //implicit wait
 		Thread.sleep(7000);
 		
 		
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver)  //fluent wait
 		.withTimeout(Duration.ofSeconds(30))
 		.ignoring(NoSuchElementException.class)
 		.pollingEvery(Duration.ofSeconds(1))
 		.withMessage("loaded");
 		
-		WebElement LoginButtonelement = wait.until(new Function<WebDriver,WebElement >(){
+		WebElement LoginButtonelement = wait.until(new Function<WebDriver,WebElement >(){             //explicit wait
 			
 			public WebElement apply(WebDriver driver) {
 		return driver.findElement(By.xpath("//*[@id=\"loginBtn\"]"));

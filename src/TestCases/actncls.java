@@ -37,7 +37,7 @@ public class actncls {
 		WebElement trashElement=driver.findElement(By.xpath("//*[@id=\"trash\"]/ul/li/img"));
 		WebElement backElement=driver.findElement(By.xpath("//*[@id=\"gallery\"]"));
 		Actions action1=new Actions(driver);
-		action1.dragAndDrop(trashElement, backElement).clickAndHold(trashElement)
+		action1.dragAndDrop(trashElement, backElement).clickAndHold(trashElement) 
 		.moveToElement(backElement).release(backElement).perform();
 		
 		Thread.sleep(10000);

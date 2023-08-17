@@ -17,6 +17,7 @@ public class amzn {
 		
 		JavascriptExecutor jse=(JavascriptExecutor)driver;
 		jse.executeScript("scrollBy (0,2000)");
+		driver.manage().window().maximize();
 		
 
 	}

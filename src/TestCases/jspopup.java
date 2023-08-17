@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class jspopup {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver","./Chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\eclipse-workspace\\selenium\\chromedriver_win32\\Chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.hyrtutorials.com/p/alertsdemo.html");
 		driver.manage().window().maximize();

@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class bbqq {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","./Chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\eclipse-workspace\\First\\chromedriver.exe");
 		ChromeDriver  driver = new ChromeDriver();
 		driver.get("C:/Users/samim/Downloads/MultipleWindow%20(1).html");
 		String currentWindowId=driver.getWindowHandle();

@@ -13,6 +13,9 @@ import org.openqa.selenium.support.ui.Select;
 public class dropdwn {
 
 	public static void main(String[] args) throws InterruptedException {
+System.setProperty("webdriver.chrome.driver","C:\\eclipse-workspace\\selenium\\chromedriver_win32\\Chromedriver.exe");
+		
+		
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://en-gb.facebook.com/reg/");
 		driver.manage().window().maximize();
@@ -22,7 +25,8 @@ public class dropdwn {
 		WebElement dayDropDown = driver.findElement(By.id("day"));
 		Select ref = new Select (dayDropDown);
 		ref.selectByValue("9");
-		if(ref.isMultiple()==false) {
+		ref.selectByValue("12");
+		if(ref.isMultiple()==true) {
 			System.out.println("Single");
 		}
 		else {
@@ -38,7 +42,7 @@ public class dropdwn {
 		}
 		List<WebElement> allSelected = ref.getAllSelectedOptions();
 		for(WebElement each:allSelected) {
-			if(each.getText().equals("1")) {
+			if(each.getText().equals("9")) {
 				System.out.println("Selected Same");
 			}
 			else {

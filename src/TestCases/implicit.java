@@ -15,10 +15,11 @@ public class implicit {
 		System.setProperty("webdriver.chrome.driver","./Chromedriver.exe");
 		WebDriver  driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		driver.get("https://shoppersstack.com/");
 		driver.findElement(By.id("loginBtn")).click();
-		// TODO Auto-generated method stub
+		driver.quit();
 
 	}
 
